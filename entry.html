@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2tt6 :: Daily Entry</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="page-wrap">
+
+  <div class="site-banner">
+    <h1>2tt6</h1>
+    <span class="tagline">*~ a public diary of progress ~*</span>
+  </div>
+  <marquee class="subbanner">fill this out, generate the code, paste into js/data.js, commit ★ that's it ★</marquee>
+
+  <nav class="retro-nav">
+    <a href="index.html">🏠 Routine</a>
+    <a href="affirmations.html">💬 Affirmations</a>
+    <a href="calendar.html">📅 Calendar</a>
+    <a href="scoreboard.html">🏆 Scoreboard</a>
+    <a href="entry.html" class="active">📝 Daily Entry</a>
+    <a href="habits.html">🚦 Habits Chart</a>
+  </nav>
+
+  <div class="panel">
+    <h2>Today's Entry</h2>
+    <p>This form doesn't save anything by itself (this is a static site with no backend/database). Instead, it <strong>generates a ready-to-paste block of code</strong> for you at the bottom. Copy that block into the <code>ENTRIES</code> array in <code>js/data.js</code> on GitHub, commit, and Netlify will publish it.</p>
+
+    <div class="construction-banner"><span>if you have photos: upload them into the /images folder on GitHub FIRST, then type their filenames below</span></div>
+
+    <div class="retro-form">
+      <label for="field-date">Date</label>
+      <input type="date" id="field-date">
+
+      <label for="field-diary">Diary Entry</label>
+      <textarea id="field-diary" placeholder="How was today..."></textarea>
+
+      <label for="field-progress">Progress Notes</label>
+      <textarea id="field-progress" placeholder="What moved forward..."></textarea>
+
+      <label for="field-food">Food & Drink</label>
+      <textarea id="field-food" placeholder="What you ate/drank today..."></textarea>
+
+      <label for="field-photos">Photos (filenames in /images, comma separated)</label>
+      <input type="text" id="field-photos" placeholder="images/2026-07-15-a.jpg, images/2026-07-15-b.jpg">
+
+      <label>Activities / Habits today</label>
+      <div class="checkbox-grid" id="activity-checkboxes"></div>
+
+      <p style="margin-top:16px;">
+        <button class="btn-89 pink" id="generate-btn" type="button">⚡ Generate Code ⚡</button>
+      </p>
+    </div>
+  </div>
+
+  <div class="panel" id="output-wrap" style="display:none;">
+    <h2>Your Generated Code</h2>
+    <p>Copy everything below and paste it inside the <code>ENTRIES = [ ... ]</code> array in <code>js/data.js</code> (add a comma after the entry before it, if needed).</p>
+    <textarea class="codeblock" id="output-code" readonly></textarea>
+    <p>
+      <button class="btn-89 cyan" type="button" onclick="copyOutputCode()">📋 Copy to clipboard</button>
+      <span id="copy-status" style="margin-left:10px; font-weight:bold; color:green;"></span>
+    </p>
+  </div>
+
+  <footer class="retro-footer">
+    <p>&copy; 2tt6 — a personal progress diary. Hosted with Netlify, edited on GitHub.</p>
+  </footer>
+
+</div>
+
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2tt6 :: Habits Chart</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="page-wrap">
+
+  <div class="site-banner">
+    <h1>2tt6</h1>
+    <span class="tagline">*~ a public diary of progress ~*</span>
+  </div>
+  <marquee class="subbanner">green good ★ yellow neutral ★ red not great ★ patterns don't lie ★</marquee>
+
+  <nav class="retro-nav">
+    <a href="index.html">🏠 Routine</a>
+    <a href="affirmations.html">💬 Affirmations</a>
+    <a href="calendar.html">📅 Calendar</a>
+    <a href="scoreboard.html">🏆 Scoreboard</a>
+    <a href="entry.html">📝 Daily Entry</a>
+    <a href="habits.html" class="active">🚦 Habits Chart</a>
+  </nav>
+
+  <div class="panel">
+    <h2>Habits Colour Chart</h2>
+    <p>Every day you've logged, colour-coded by habit:</p>
+    <ul>
+      <li><span class="cell-positive" style="padding:2px 8px;">green</span> = positive habit (read, stretch, drink water)</li>
+      <li><span class="cell-neutral" style="padding:2px 8px;">yellow</span> = neutral habit (intimacy, socialise)</li>
+      <li><span class="cell-negative" style="padding:2px 8px; color:#fff;">red</span> = negative habit (drink, self destructive, gamble)</li>
+      <li><span class="cell-empty" style="padding:2px 8px;">grey</span> = not logged that day</li>
+    </ul>
+    <div id="habits-table-wrap"></div>
+  </div>
+
+  <hr class="rainbow">
+
+  <div class="panel">
+    <h2>✏️ Adding or editing habits</h2>
+    <p>Open <code>js/data.js</code> on GitHub and find the <code>ACTIVITIES</code> array. Each habit has:</p>
+    <ul>
+      <li><code>key</code> — internal id (no spaces), keep it the same once you start using it</li>
+      <li><code>label</code> — the name shown on the site, safe to rename anytime</li>
+      <li><code>type</code> — <code>"positive"</code>, <code>"neutral"</code>, or <code>"negative"</code>, controls the colour</li>
+    </ul>
+    <p>New habits will automatically appear here, in the Daily Entry checklist, and as dots on the Calendar.</p>
+  </div>
+
+  <footer class="retro-footer">
+    <p>&copy; 2tt6 — a personal progress diary. Hosted with Netlify, edited on GitHub.</p>
+  </footer>
+
+</div>
+
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

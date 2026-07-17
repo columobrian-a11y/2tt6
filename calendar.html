@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2tt6 :: Calendar</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="page-wrap">
+
+  <div class="site-banner">
+    <h1>2tt6</h1>
+    <span class="tagline">*~ a public diary of progress ~*</span>
+  </div>
+  <marquee class="subbanner">click any highlighted day to see that day's diary, progress, photos, food & habits ★</marquee>
+
+  <nav class="retro-nav">
+    <a href="index.html">🏠 Routine</a>
+    <a href="affirmations.html">💬 Affirmations</a>
+    <a href="calendar.html" class="active">📅 Calendar</a>
+    <a href="scoreboard.html">🏆 Scoreboard</a>
+    <a href="entry.html">📝 Daily Entry</a>
+    <a href="habits.html">🚦 Habits Chart</a>
+  </nav>
+
+  <div class="panel">
+    <h2>Calendar</h2>
+    <p>Every diary entry, progress note, photo, food/drink log, and habit checklist — all in one place, organised by date.</p>
+
+    <div class="cal-header">
+      <button class="btn-89" id="cal-prev">&laquo; Prev</button>
+      <strong id="cal-label">Month Year</strong>
+      <button class="btn-89" id="cal-next">Next &raquo;</button>
+    </div>
+
+    <div class="cal-grid" id="cal-grid"></div>
+
+    <p style="font-size:0.75rem; margin-top:8px;">
+      <span class="dot dot-positive" style="display:inline-block;"></span> positive habit
+      &nbsp; <span class="dot dot-neutral" style="display:inline-block;"></span> neutral habit
+      &nbsp; <span class="dot dot-negative" style="display:inline-block;"></span> negative habit
+    </p>
+  </div>
+
+  <div id="entry-detail" class="panel"></div>
+
+  <footer class="retro-footer">
+    <p>&copy; 2tt6 — a personal progress diary. Hosted with Netlify, edited on GitHub.</p>
+  </footer>
+
+</div>
+
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

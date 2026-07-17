@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2tt6 :: Scoreboard</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="page-wrap">
+
+  <div class="site-banner">
+    <h1>2tt6</h1>
+    <span class="tagline">*~ a public diary of progress ~*</span>
+  </div>
+  <marquee class="subbanner">the counters only go up ★ keep the streaks alive ★</marquee>
+
+  <nav class="retro-nav">
+    <a href="index.html">🏠 Routine</a>
+    <a href="affirmations.html">💬 Affirmations</a>
+    <a href="calendar.html">📅 Calendar</a>
+    <a href="scoreboard.html" class="active">🏆 Scoreboard</a>
+    <a href="entry.html">📝 Daily Entry</a>
+    <a href="habits.html">🚦 Habits Chart</a>
+  </nav>
+
+  <div class="panel">
+    <h2>Scoreboard</h2>
+    <p>"Days since..." counters. These update automatically based on today's date — you never need to do the maths yourself.</p>
+    <div class="score-grid" id="scoreboard-grid"></div>
+  </div>
+
+  <hr class="rainbow">
+
+  <div class="panel">
+    <h2>✏️ Editing this page</h2>
+    <p>Open <code>js/data.js</code> on GitHub and find the <code>SCOREBOARD</code> array. Each card has a <code>label</code> and a <code>lastDate</code>.</p>
+    <p>When something happens again (e.g. you have a drink), just change that card's <code>lastDate</code> to that day's date in <code>"YYYY-MM-DD"</code> format and commit. The counter resets itself.</p>
+  </div>
+
+  <footer class="retro-footer">
+    <p>&copy; 2tt6 — a personal progress diary. Hosted with Netlify, edited on GitHub.</p>
+  </footer>
+
+</div>
+
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
